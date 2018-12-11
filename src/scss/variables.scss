@@ -1,0 +1,18 @@
+$music_player_height: 8rem;
+$sidebar_height: calc(100vh - #{$music_player_height});
+$sidebar_width: 15rem;
+
+$color_black: rgb(0, 0, 0);
+$color_light_black: rgb(70, 70, 70);
+$color_gray: rgb(230, 230, 230);
+$color_light_blue: rgb(0, 102, 255);
+$color_dark_blue: rgb(0, 22, 56);
+$color_light_green: rgb(0, 206, 62);
+$color_dark_green: rgb(0, 68, 20);
+$color_light_red: rgb(199, 0, 0);
+$color_dark_red: rgb(50, 0, 0);
+// $color_dark_red: rgb(172, 0, 0);
+
+$fontsize_small: .8em;
+$fontsize_medium: 1.2em;
+$fontsize_large: 1.5em;

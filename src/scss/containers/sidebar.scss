@@ -1,0 +1,126 @@
+.sidebar {
+    padding: 2.5rem 0;
+    position: fixed;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 1fr 10%;
+    height: $sidebar_height;
+    width: $sidebar_width;
+    background-color: black;
+    padding-bottom: $music_player_height;
+    z-index: 100;
+    transition: all .2s;
+
+    @include respond(phone) {
+        transform: translateX(-100%);
+
+        &--active {
+            transform: translateX(0);
+        }
+    }
+
+    & * {
+        color: white;
+    }
+
+    &__logo {
+        margin-bottom: 5rem;
+        justify-self: center;
+    }
+
+    &__navigation {
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+
+        a {
+            display: flex;
+            align-items: center;
+
+            i {
+                flex-basis: 2rem;
+            }
+        }
+    }
+
+    &__navigator {
+        position: relative;
+        padding: 1rem 2rem;
+
+        & > * {
+            z-index: 10;
+        }
+
+        &::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: $color-light-black;
+            transform: scaleX(0);
+            transition: all .2s;
+        }
+
+        &:hover::after {
+            transform: scaleX(1);
+        }
+
+        &--active::after {
+            transform: scaleX(1);
+        }
+    }
+
+    &__authen {
+        cursor: pointer;
+        justify-self: center;
+        
+        i {
+            margin-right: 1rem;
+        }
+
+        &--after i {
+            display: block;
+            margin: 0 auto;
+            width: fit-content;
+            border: 1px solid $color-gray;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 50%;
+        }
+    }
+
+    &__authen-option {
+        background-color: transparent;
+        border: 1px solid $color-gray;
+        border-radius: 5rem;
+        padding: 1rem 2rem;
+        margin: 0 auto;
+        display: block;
+        outline: none;
+        transition: all .1s;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.hamburger-btn {
+    position: absolute;
+    top: 1rem;
+    left: calc(#{$sidebar_width} + 1rem);
+    background-color: black;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+    @include respond(phone) {
+        display: flex;
+    }
+}

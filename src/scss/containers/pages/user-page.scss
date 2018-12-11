@@ -1,0 +1,30 @@
+.user-page {
+    background-image: linear-gradient(to bottom right, $color_light_black, $color_black);
+}
+
+.user {
+    &__avatar {
+        color: $color-gray;
+        font-size: 15rem;
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    &__operation {
+        background-color: transparent;
+        cursor: pointer;
+        border: 1px solid $color-gray;
+        border-radius: 5rem;
+        padding: 1rem 3rem;
+        margin: 0 auto;
+        display: block;
+        margin-top: 5rem;
+        outline: none;
+        transition: all .1s;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}

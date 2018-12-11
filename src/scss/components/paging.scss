@@ -1,0 +1,16 @@
+.paging {
+    margin: 0 auto;
+    margin-top: 10rem;
+    width: fit-content;
+
+    &__navigate {
+        margin-right: 2rem;
+    }
+
+    &__present-page {
+        display: inline-block;
+        transform: scale(1.3);
+        font-weight: bolder;
+        text-shadow: 0 0 2px black;
+    }
+}

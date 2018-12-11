@@ -1,0 +1,32 @@
+.user-playlist {
+    background-image: linear-gradient(to bottom right, $color_light_red, $color_dark_red);
+
+    &__header {
+        padding-bottom: 3rem;
+        margin-bottom: 5rem;
+        display: flex;
+        align-items: center;
+
+        i {
+            margin-left: 5rem;
+        }
+    }
+
+    &__song {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        i {
+            margin-left: 2rem;
+        }
+    }
+}
+
+.playlist-save {
+    margin-top: 10rem;
+
+    strong {
+        text-decoration: underline;
+    }
+}

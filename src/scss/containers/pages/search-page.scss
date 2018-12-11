@@ -1,0 +1,70 @@
+.search-page {
+    background-image: linear-gradient(to bottom right, $color_light_green, $color_dark_green);
+}
+
+.search-input {
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    margin-bottom: 5rem;
+    
+    input {
+        width: 100%;
+        outline: none;
+        height: 4rem;
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+        border: none;
+    }
+
+    &__icon {
+        height: 4rem;
+        position: absolute;
+        width: 4rem;
+        border-radius: 0 1rem 1rem 0;
+        background-color: $color-gray;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: 0;
+        font-size: $fontsize_medium;
+        cursor: pointer;
+    }
+}
+
+.search-result {
+
+    &__total {
+        margin-bottom: 2rem;
+        display: block;
+    }
+    
+    &__song-list {
+        width: 50%;
+    }
+
+    &__song {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $color-gray;
+        }
+    }
+
+    &__song-title {
+        display: flex;
+        align-items: center;
+
+        i {
+            margin-left: 1rem;
+        }
+
+        &--secondary {
+            font-weight: normal;
+        }
+    }
+}

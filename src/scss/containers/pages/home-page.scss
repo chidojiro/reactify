@@ -1,0 +1,14 @@
+.home-page {
+    display: flex;
+    background-image: linear-gradient(to bottom right, $color_light_blue, $color_dark_blue);
+}
+
+.feature-artists {
+    padding-right: 5rem;
+
+    &__header {
+        text-transform: uppercase;
+        color: $color_dark_red;
+        margin-bottom: 5rem;
+    }
+}

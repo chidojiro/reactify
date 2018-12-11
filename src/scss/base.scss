@@ -1,0 +1,119 @@
+html {
+    font-family: 'Open Sans';
+    font-size: 10px;
+
+    @include respond(tab-land) {
+        font-size: 8px;
+    }
+
+    @include respond(tab-port) {
+        font-size: 5px;
+    }
+
+    @include respond(phone) {
+        font-size: 3.5px;
+    }
+}
+
+body {
+    font-size: 1.6rem;
+    max-width: 1368px;
+    margin: 0 auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+}
+
+*:not(i) {
+    color: $color-gray;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    font-family: inherit;
+    font-size: inherit;
+    color: black;
+}
+
+.general-content {
+    position: relative;
+    padding: 5rem;
+    margin-left: $sidebar-width;
+    padding-bottom: calc(#{$music_player_height} + 10rem);
+    min-height: 100vh;
+
+    @include respond(phone) {
+        margin-left: 0;
+        padding-left: 7rem;
+    }
+}
+
+.avatar {
+    background-color: $color-gray;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 1rem;
+    flex-shrink: 0;
+
+    i {
+        font-size: 2rem;
+    }
+}
+
+.slider {
+    cursor: pointer;
+    background-color: $color_gray;
+    outline: none;
+    appearance: none;
+    height: .5rem;
+    display: block;
+
+    &::-webkit-slider-thumb {
+        appearance: none;
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: black;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
+}
+
+.song-title {
+    cursor: pointer;
+    transition: all .2s;
+
+    &:hover {
+        color: lighten($color-gray, 40%);
+        transform: scale(1.02);
+    }
+}
+
+.with-seperator {
+    border-bottom: 1px solid $color-gray;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.disabled {
+    pointer-events: none;
+    
+    .btn, &.btn {
+        opacity: 0.4;
+        pointer-events: none;
+    }
+}
+
