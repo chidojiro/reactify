@@ -1,8 +1,12 @@
-#.gitignore for prod
-src/*
-public/*
-build/static/css/*.map
-build/static/js/*.map
+###### .gitignore for prod ######
+# src/*
+# public/*
+# build/static/css/*.map
+# build/static/js/*.map
+#################################
 
-.gitignore
+###### .gitignore for dev ######
+build/*
+#################################
+
 node_modules/
