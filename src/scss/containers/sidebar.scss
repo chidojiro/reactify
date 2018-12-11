@@ -48,7 +48,7 @@
         padding: 1rem 2rem;
 
         & > * {
-            z-index: 100;
+            z-index: 10;
         }
 
         &::after {
@@ -114,8 +114,8 @@
     left: calc(#{$sidebar_width} + 1rem);
     background-color: black;
     border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
+    width: 5rem;
+    height: 5rem;
     justify-content: center;
     align-items: center;
     display: none;
